@@ -1,0 +1,5 @@
+<h1><%= @tea.name %></h1>
+
+<%= link_to "Back", teas_path %>
+<%= link_to "Edit", edit_tea_path(@tea) %>
+<%= button_to "Delete", @tea, method: :delete, data: { turbo_confirm: "Are you sure?" } %>

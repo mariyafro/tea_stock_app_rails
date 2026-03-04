@@ -12,4 +12,19 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  get "/teas", to: "teas#index"
+
+  get "/teas/new", to: "teas#new"
+  post "/teas", to: "teas#create"
+
+  get "/teas/:id", to: "teas#show"
+
+  get "/teas/:id/edit", to: "teas#edit"
+  patch "/teas/:id", to: "teas#update"
+  put "/teas/:id", to: "teas#update"
+
+  delete "/teas/:id", to: "teas#destroy"
+
+  root "teas#index"
+  resources :teas
 end
